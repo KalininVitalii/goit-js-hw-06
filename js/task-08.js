@@ -7,9 +7,14 @@ function handler(event) {
   const {
     elements: { email, password },
   } = event.currentTarget;
+
   if (email.value === '' || password.value === '') {
     return alert('Please fill in all the fields');
   }
-  console.log(`Email: ${email.value}, Password: ${password.value}`);
+  const emailUser = email.value;
+  const passwordUser = password.value;
+  const dataUser = { email: emailUser, password: passwordUser };
+  // const dataUser = {email: ${email.value}, password: ${password.value}}
+  console.log(dataUser);
   event.currentTarget.reset();
 }

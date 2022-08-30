@@ -3,9 +3,10 @@ function getRandomHexColor() {
 }
 
 const btnChangeColor = document.querySelector('button.change-color');
-const widgetColor = document.querySelector('.widget');
+const body = document.querySelector('body');
+const colorName = document.querySelector('.color');
 
 btnChangeColor.addEventListener('click', e => {
-  let color = getRandomHexColor();
-  widgetColor.style.backgroundColor = color;
+  body.style.backgroundColor = getRandomHexColor();
+  colorName.textContent = getRandomHexColor();
 });
